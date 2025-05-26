@@ -286,6 +286,16 @@
     }
   </style>
 </head>
+
+<script>
+  const correctPassword = "AuT"; // Şifreni buraya yaz
+  const userInput = prompt("🔐 Bu sayfaya erişmek için şifre girin:");
+
+  if (userInput !== correctPassword) {
+    document.body.innerHTML = "<div style='text-align:center; padding:100px; font-family:sans-serif;'><h1>⛔ Erişim Reddedildi</h1><p>Yanlış şifre girdiniz.</p></div>";
+    throw new Error("Unauthorized access");
+  }
+</script>
 <body>
   <div class="container">
     <div class="card">
